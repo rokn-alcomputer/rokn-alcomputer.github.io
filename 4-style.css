@@ -1,0 +1,13 @@
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#0f1420;color:#e8ecf4;line-height:1.8}
+a{color:#6cb6ff}header{background:#161d2e;padding:20px;text-align:center;border-bottom:3px solid #3b82f6}
+header h1{margin:0;font-size:2rem}header p{margin:.3rem 0 0;color:#a9b4c8}
+nav{margin-top:12px}nav a{margin:0 10px;text-decoration:none;font-weight:bold}
+main{max-width:900px;margin:24px auto;padding:0 16px}
+.btn{display:inline-block;background:#ff0033;color:#fff;padding:10px 22px;border-radius:8px;text-decoration:none;font-weight:bold}
+.card{background:#171f31;border-radius:12px;padding:16px;margin:18px 0}
+.card img{width:100%;border-radius:8px}
+.video{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+footer{text-align:center;color:#8a96ad;padding:24px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:8px;display:block}
