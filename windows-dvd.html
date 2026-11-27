@@ -1,0 +1,48 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>احرق اسطوانة ويندوز + الفرق بين MBR و GPT | ركن الكمبيوتر</title><meta name="description" content="إزاي تحمل ملف ويندوز ISO من مايكروسوفت وتحرقه على اسطوانة DVD بأداة الويندوز المدمجة، والفرق بين MBR و GPT وإزاي تعرف نظام جهازك وتختار الصح."><link rel="stylesheet" href="style.css"></head><body><header><h1>ركن الكمبيوتر</h1><p>شروحات برامج الكمبيوتر خطوة بخطوة</p><nav><a href='index.html'>الرئيسية</a><a href='deep-freeze.html'>Deep Freeze</a><a href='windows-11.html'>ويندوز 11</a><a href='speed-up-windows.html'>تسريع ويندوز</a><a href='bootable-usb.html'>فلاشة بوت</a><a href='windows-security.html'>أمان Windows</a><a href='file-backup.html'>نسخ احتياطي</a><a href='reset-pc.html'>ريست ويندوز</a><a href='storage.html'>مساحة الهارد</a><a href='startup-repair.html'>إصلاح التشغيل</a><a href='windows-dvd.html'>اسطوانة ويندوز</a><a href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">قناة يوتيوب</a></nav></header><main>
+<h2>احرق اسطوانة ويندوز من مايكروسوفت نفسها + الفرق بين MBR و GPT (بدون برامج)</h2>
+<div class="video"><iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_d_6Cyf0h74" title="احرق اسطوانة ويندوز والفرق بين MBR و GPT" allowfullscreen></iframe></div>
+<div class="card"><p>لو الشرح فادك: لايك وشير للفيديو، واشترك في القناة.</p><a class="btn" href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">اشترك في القناة</a></div>
+<div class="card"><h2>اللي هتحتاجه</h2><ul>
+<li>جهاز عليه نت، وقارئ أسطوانات بيكتب، وأسطوانة DVD فاضية.</li>
+<li>ملف ويندوز 11 أكبر من الأسطوانة العادية (4.7 جيجا)، فهتحتاج أسطوانة بطبقة مزدوجة 8.5 جيجا.</li>
+<li>معندكش قارئ أسطوانات؟ الفلاشة أسهل وأسرع: شوف فيديو <a href="bootable-usb.html">فلاشة بوت</a>.</li></ul></div>
+<div class="card"><h2>الخطوة 1: تحميل ملف ISO</h2><ol>
+<li>افتح صفحة تحميل الويندوز على موقع مايكروسوفت الرسمي (الروابط تحت).</li>
+<li>لويندوز 11: من قسم Download Windows 11 Disk Image اختار النسخة ثم اللغة وحمل ملف الـ ISO.</li>
+<li>لويندوز 10: نزّل أداة Media Creation Tool، شغّلها واختار Create installation media ثم ISO file.</li>
+<li>الملف حوالي 5.5 لـ 6 جيجا، فاستنى التحميل يخلص خالص.</li></ol></div>
+<div class="card"><h2>الخطوة 2: الحرق بأداة الويندوز المدمجة</h2><ol>
+<li>ركّب الأسطوانة الفاضية.</li>
+<li>كليك يمين على ملف الـ ISO واختار Burn disc image (حرق صورة أسطوانة).</li>
+<li>اختار محرك الأسطوانات، وفعّل Verify disc after burning، ثم Burn واستنى لما تخلص.</li></ol></div>
+<div class="card"><h2>تحذير مهم</h2><ul>
+<li>متنسخش ملف الـ ISO على الأسطوانة نسخ عادي: النسخ العادي مش بيخلي الجهاز يقلع منها.</li>
+<li>لازم تتحرق كصورة أسطوانة بـ Burn disc image عشان تبقى اسطوانة بوت.</li></ul></div>
+<div class="card"><h2>الإقلاع من الأسطوانة</h2><ol>
+<li>اعمل ريستارت للجهاز اللي هتثبّت عليه.</li>
+<li>ادخل قائمة البوت أو البيوس وخليه يقلع من قارئ الأسطوانات.</li>
+<li>هتبدأ شاشة تثبيت الويندوز.</li></ol></div>
+<div class="card"><h2>الفرق بين MBR و GPT</h2><ul>
+<li>دول نظامين لتنظيم تقسيمات الهارد (Partition Styles)، وأي هارد لازم واحد منهم.</li>
+<li><b>MBR:</b> الأقدم (من 1983)، بيشتغل مع Legacy BIOS، حد أقصى للهارد 2 تيرا، وحد أقصى 4 بارتيشنات أساسية.</li>
+<li><b>GPT:</b> الأحدث، بيشتغل مع UEFI، بيدعم هاردات أكبر من 2 تيرا، 128 بارتيشن في الويندوز، وبيحتفظ بنسخة احتياطية من جدول التقسيم.</li>
+<li>ويندوز 11 بيشترط UEFI مع Secure Boot، يعني هارد النظام لازم GPT.</li></ul></div>
+<div class="card"><h2>اعرف نظام جهازك</h2><ol>
+<li>كليك يمين على زرار ويندوز ثم Disk Management، كليك يمين على Disk 0 ثم Properties ثم تبويب Volumes: قدام Partition style هتلاقي MBR أو GPT.</li>
+<li>أو افتح Run بـ Windows + R واكتب msinfo32 وبص على BIOS Mode: UEFI يعني الحديث، Legacy يعني القديم.</li></ol></div>
+<div class="card"><h2>تختار أنهي؟</h2><ul>
+<li>جهاز حديث بـ UEFI: GPT (ومطلوب لويندوز 11).</li>
+<li>جهاز قديم مش بيدعم غير Legacy: MBR.</li>
+<li>التحويل من MBR لـ GPT من غير فورمات: أداة MBR2GPT المدمجة من مايكروسوفت، بشرط الجهاز يدعم UEFI، وبعدها غيّر البيوس من Legacy لـ UEFI.</li></ul></div>
+<div class="card"><h2>الأوامر</h2><ul>
+<li><b>msinfo32</b> - يفتح نافذة معلومات النظام، ومنها BIOS Mode عشان تعرف جهازك UEFI ولا Legacy.</li>
+<li><b>diskmgmt.msc</b> - يفتح إدارة الأقراص، ومن خصائص الهارد تعرف نظام التقسيم MBR ولا GPT.</li>
+<li><b>mbr2gpt /validate /convert /allowFullOS</b> - أداة مايكروسوفت المدمجة لتحويل الهارد من MBR لـ GPT من غير مسح البيانات (بتشتغل من Command Prompt كمسؤول، وبشرط الجهاز يدعم UEFI).</li></ul></div>
+<div class="card"><h2>الروابط</h2><ul>
+<li>إنشاء وسائط تثبيت الويندوز (مايكروسوفت):<br><a style="word-break:break-all" href="https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d" target="_blank" rel="noopener">https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d</a></li>
+<li>تحميل ويندوز 11 (مايكروسوفت):<br><a style="word-break:break-all" href="https://www.microsoft.com/software-download/windows11" target="_blank" rel="noopener">https://www.microsoft.com/software-download/windows11</a></li>
+<li>تحميل ويندوز 10 (مايكروسوفت):<br><a style="word-break:break-all" href="https://www.microsoft.com/software-download/windows10" target="_blank" rel="noopener">https://www.microsoft.com/software-download/windows10</a></li>
+<li>أداة MBR2GPT (مايكروسوفت):<br><a style="word-break:break-all" href="https://learn.microsoft.com/en-us/windows/deployment/mbr-to-gpt" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows/deployment/mbr-to-gpt</a></li>
+</ul></div>
+</main><main><footer>© ركن الكمبيوتر · <a href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">اشترك في القناة على يوتيوب</a></footer><script data-goatcounter='https://rokn-alcomputer.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></body></html>
