@@ -1,0 +1,57 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>حل الشاشة الزرقاء في ويندوز 10 | ركن الكمبيوتر</title><meta name="description" content="حل الشاشة الزرقاء (BSOD) في ويندوز 10 خطوة بخطوة بأدوات مايكروسوفت: قراءة الـ Stop code، فحص الهارد chkdsk وملفات النظام sfc وأداة DISM، الوضع الآمن وبيئة الاسترداد، والحل الأخير Reset this PC."><link rel="stylesheet" href="style.css"></head><body><header><h1>ركن الكمبيوتر</h1><p>شروحات برامج الكمبيوتر خطوة بخطوة</p><nav><a href='index.html'>الرئيسية</a><a href='deep-freeze.html'>Deep Freeze</a><a href='windows-11.html'>ويندوز 11</a><a href='speed-up-windows.html'>تسريع ويندوز</a><a href='bootable-usb.html'>فلاشة بوت</a><a href='windows-security.html'>أمان Windows</a><a href='file-backup.html'>نسخ احتياطي</a><a href='reset-pc.html'>ريست ويندوز</a><a href='storage.html'>مساحة الهارد</a><a href='startup-repair.html'>إصلاح التشغيل</a><a href='windows-dvd.html'>اسطوانة ويندوز</a><a href='desktop-settings.html'>سطح المكتب</a><a href='blue-screen.html'>الشاشة الزرقاء</a><a href='powertoys.html'>باور تويز</a><a href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">قناة يوتيوب</a></nav></header><main>
+<h2>الشاشة الزرقاء في ويندوز 10: الحل خطوة بخطوة بأدوات مايكروسوفت (حالة حقيقية Ntfs.sys)</h2>
+<div class="video"><iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9RiyYgUSx6I" title="حل الشاشة الزرقاء في ويندوز 10" allowfullscreen></iframe></div>
+<div class="card"><p>لو الشرح فادك: لايك وشير للفيديو، واشترك في القناة.</p><a class="btn" href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">اشترك في القناة</a></div>
+<div class="card"><h2>اقرأ الشاشة الأول</h2><ul>
+<li>الشاشة الزرقاء (Stop code error) معناها إن ويندوز قفل فورًا عشان يحمي جهازك، وبعدها بيعيد التشغيل.</li>
+<li>تحت فيها سطرين مهمين: كود المشكلة (Stop code) واسم الملف اللي كان شغال وقتها (What failed).</li>
+<li>لو حصلت مرة واحدة والجهاز اشتغل عادي، غالبًا مفيش مشكلة. لو بتتكرر بنفس الكود، كمّل الخطوات اللي تحت.</li>
+<li>حالة الفيديو: الكود SYSTEM THREAD EXCEPTION NOT HANDLED والملف Ntfs.sys، وده ملف نظام مسؤول عن قراءة وكتابة الملفات، فالسبب غالبًا في نظام الملفات أو الهارد.</li></ul></div>
+<div class="card"><h2>قبل أي إصلاح</h2><ul>
+<li>انسخ ملفاتك المهمة على هارد خارجي أو فلاشة أو OneDrive. الشرح الكامل في صفحة <a href="file-backup.html">نسخ احتياطي</a>.</li>
+<li>شيل أي هاردوير جديد ركبته قبل ما المشكلة تبدأ وجرّب تشغل من غيره.</li>
+<li>أتأكد إن عندك مساحة فاضية على الهارد من 10% لـ 15% على الأقل (شوف صفحة <a href="storage.html">مساحة الهارد</a> لو محتاج تفضّي).</li></ul></div>
+<div class="card"><h2>الخطوة 1: فحص الهارد chkdsk</h2><ol>
+<li>كليك يمين على علامة ويندوز واختار Windows PowerShell (Admin) أو Command Prompt (Admin).</li>
+<li>اكتب الأمر <b>chkdsk C: /f /r</b> ودوس Enter.</li>
+<li>هيسألك تحجز الفحص لأول إعادة تشغيل: اكتب حرف Y ودوس Enter، وبعدين أعد تشغيل الجهاز.</li>
+<li>الفحص ممكن ياخد وقت طويل، سيبه يكمل للآخر.</li></ol></div>
+<div class="card"><h2>الخطوة 2: فحص ملفات النظام sfc</h2><ol>
+<li>من نفس النافذة كمسؤول اكتب <b>sfc /scannow</b> ودوس Enter.</li>
+<li>الأداة بتدور على ملفات ويندوز التالفة وبتستبدلها بنسخ سليمة.</li>
+<li>لو لقت مشاكل وصلحتها، أعد تشغيل الجهاز وجرّب.</li></ol></div>
+<div class="card"><h2>الخطوة 3: أداة DISM</h2><ol>
+<li>لو sfc ما قدرش يصلح كل حاجة، اكتب <b>DISM /Online /Cleanup-Image /RestoreHealth</b> ودوس Enter.</li>
+<li>الأمر ده محتاج إنترنت شغال وممكن ياخد ربع ساعة أو أكتر.</li>
+<li>بعد ما يخلص شغّل <b>sfc /scannow</b> تاني للتأكيد، وبعدين أعد التشغيل.</li></ol></div>
+<div class="card"><h2>توصيات مايكروسوفت بعد الفحص</h2><ul>
+<li>افتح Device Manager (كليك يمين على علامة ويندوز): لو في جهاز عليه علامة تعجب صفرا، كليك يمين عليه واختار Update driver.</li>
+<li>الإعدادات ← Update &amp; Security ← Windows Update ← Check for updates، ونزّل أي تحديثات موجودة.</li></ul></div>
+<div class="card"><h2>لو الجهاز مش بيفتح: بيئة الاسترداد</h2><ol>
+<li>لو قادر توصل لشاشة تسجيل الدخول: دوس زرار إعادة التشغيل وانت داسس Shift. ولو الجهاز بيفشل في الإقلاع 3 مرات ورا بعض، ويندوز بيدخل بيئة الاسترداد لوحده.</li>
+<li>اختار Troubleshoot ثم Advanced options.</li>
+<li><b>Startup Repair:</b> بيحاول يصلح مشاكل الإقلاع تلقائي (شوف صفحة <a href="startup-repair.html">إصلاح التشغيل</a>).</li>
+<li><b>Startup Settings</b> ثم Restart ثم رقم 4: يدخلك الوضع الآمن، ومنه تعمل كل خطوات الفحص اللي فوق.</li>
+<li><b>System Restore:</b> لو عندك نقطة استعادة قبل المشكلة، بيرجع النظام ليوم كان شغال فيه من غير ما يمس ملفاتك.</li></ol></div>
+<div class="card"><h2>الإصلاح من فلاشة أو اسطوانة ويندوز</h2><ul>
+<li>اقلع من وسائط التثبيت (شوف صفحة <a href="bootable-usb.html">فلاشة بوت</a> أو <a href="windows-dvd.html">اسطوانة ويندوز</a>) ومن أول شاشة اختار Repair your computer.</li>
+<li>هتوصل لنفس شاشة الاسترداد، ومنها تقدر تفتح Command Prompt وتشغّل chkdsk على الويندوز المثبت وهو مش شغال.</li></ul></div>
+<div class="card"><h2>الحل الأخير: Reset this PC</h2><ul>
+<li>من نفس شاشة الاسترداد اختار Reset this PC وبعدين Keep my files عشان تحتفظ بملفاتك الشخصية.</li>
+<li>الشرح الكامل خطوة بخطوة في صفحة <a href="reset-pc.html">ريست ويندوز</a>.</li></ul></div>
+<div class="card"><h2>الأوامر</h2><ul>
+<li><b>robocopy "%USERPROFILE%\Desktop" "E:\Backup\Desktop" /E /COPY:DAT /R:2 /W:5</b> - نسخ سطح المكتب إلى E:\Backup (وبنفس الطريقة Documents و Downloads: بدّل اسم الفولدر في الطرفين). نسخ تزايدي: بيضيف الجديد والمتغيّر بس.</li>
+<li><b>chkdsk C: /f /r</b> - فحص الهارد وإصلاح أخطاء نظام الملفات والقطاعات التالفة (بيبدأ بعد إعادة التشغيل).</li>
+<li><b>sfc /scannow</b> - فحص ملفات ويندوز واستبدال التالف منها بنسخ سليمة.</li>
+<li><b>DISM /Online /Cleanup-Image /RestoreHealth</b> - إصلاح مخزن ملفات ويندوز (محتاج إنترنت)، وبعدها sfc /scannow تاني.</li>
+<li><b>chkdsk E: /f</b> - فحص قرص الداتا E (اختياري).</li></ul></div>
+<div class="card"><h2>الروابط (مايكروسوفت)</h2><ul>
+<li>التعامل مع أخطاء إعادة التشغيل والـ Stop code:<br><a style="word-break:break-all" href="https://support.microsoft.com/en-us/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors" target="_blank" rel="noopener">https://support.microsoft.com/en-us/windows/experience/performance-optimization/troubleshooting-windows-unexpected-restarts-and-stop-code-errors</a></li>
+<li>إعدادات بدء تشغيل ويندوز (الوضع الآمن):<br><a style="word-break:break-all" href="https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234" target="_blank" rel="noopener">https://support.microsoft.com/en-us/windows/start-your-pc-in-safe-mode-in-windows-92c27cff-db89-8644-1ce4-b3e5e56fe234</a></li>
+<li>أداة System File Checker:<br><a style="word-break:break-all" href="https://support.microsoft.com/en-us/windows/experience/backup-recovery/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files" target="_blank" rel="noopener">https://support.microsoft.com/en-us/windows/experience/backup-recovery/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system-files</a></li>
+<li>إصلاح صورة ويندوز بـ DISM:<br><a style="word-break:break-all" href="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/repair-a-windows-image" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/repair-a-windows-image</a></li>
+<li>خيارات الاسترداد في ويندوز:<br><a style="word-break:break-all" href="https://support.microsoft.com/en-us/windows/experience/backup-recovery/recovery-options-in-windows" target="_blank" rel="noopener">https://support.microsoft.com/en-us/windows/experience/backup-recovery/recovery-options-in-windows</a></li>
+<li>مرجع أمر chkdsk:<br><a style="word-break:break-all" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk" target="_blank" rel="noopener">https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/chkdsk</a></li>
+</ul></div>
+</main><main><footer>© ركن الكمبيوتر · <a href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">اشترك في القناة على يوتيوب</a></footer><script data-goatcounter='https://rokn-alcomputer.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></body></html>
