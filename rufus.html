@@ -1,0 +1,52 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>روفوس Rufus: فلاشة تثبيت ويندوز في دقايق | ركن الكمبيوتر</title><meta name="description" content="شرح برنامج روفوس Rufus خطوة بخطوة: تحميله من الموقع الرسمي، التأكد من توقيع الملف، اختيار الفلاشة وملف ISO، إعدادات GPT وMBR، وخيارات تخطي شروط ويندوز 11."><link rel="stylesheet" href="style.css"></head><body><header><h1>ركن الكمبيوتر</h1><p>شروحات برامج الكمبيوتر خطوة بخطوة</p><nav><a href='index.html'>الرئيسية</a><a href='deep-freeze.html'>Deep Freeze</a><a href='windows-11.html'>ويندوز 11</a><a href='speed-up-windows.html'>تسريع ويندوز</a><a href='bootable-usb.html'>فلاشة بوت</a><a href='windows-security.html'>أمان Windows</a><a href='file-backup.html'>نسخ احتياطي</a><a href='reset-pc.html'>ريست ويندوز</a><a href='storage.html'>مساحة الهارد</a><a href='startup-repair.html'>إصلاح التشغيل</a><a href='windows-dvd.html'>اسطوانة ويندوز</a><a href='desktop-settings.html'>سطح المكتب</a><a href='blue-screen.html'>الشاشة الزرقاء</a><a href='powertoys.html'>باور تويز</a><a href='rufus.html'>روفوس</a><a href='pazera.html'>Pazera</a><a href='anydesk.html'>AnyDesk</a><a href='obs.html'>OBS</a><a href='clipchamp.html'>كليب تشامب</a><a href='windows-sandbox.html'>ساندبوكس</a><a href='hasleo.html'>Hasleo</a><a href='gadgetpack.html'>جادجتس</a><a href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">قناة يوتيوب</a></nav></header><main>
+<h2>روفوس Rufus: أسهل طريقة لعمل فلاشة تثبيت ويندوز (شرح عملي كامل)</h2>
+<div class="video"><iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/SIsOIyeZSns" title="روفوس Rufus: أسهل طريقة لعمل فلاشة تثبيت ويندوز" allowfullscreen></iframe></div>
+<div class="card">
+<a class="btn" href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">اشترك في القناة</a></div>
+<div class="card"><h2>إيه هو روفوس؟</h2>
+<p>روفوس أداة مجانية مفتوحة المصدر بتعمل فلاشة USB قابلة للإقلاع من ملف ISO، وحجمها حوالي 2 ميجا بس. مطورها بيت باتارد (Pete Batard) من شركة Akeo Consulting، والكود المصدري متاح على GitHub برخصة GPL.</p>
+<p>بتشتغل مع ويندوز ولينكس وتوزيعات UEFI، وتحديث BIOS من ملفات DOS، وأدوات الصيانة.</p>
+<p><b>مفيش تثبيت:</b> بتنزّل الملف وتشغّله ويشتغل على طول، وفيه نسخة portable لو عايز تحفظ إعداداتك معاك. البرنامج بيطلب صلاحيات مسؤول، وده طبيعي لأنه بيكتب على الفلاشة ويعمل تقسيمات جديدة.</p></div>
+<div class="card"><h2>التحميل من الموقع الرسمي فقط</h2>
+<p>نزّل روفوس من موقعه الرسمي <b>rufus.ie</b> أو من صفحة الإصدارات الرسمية على GitHub. ماتنزّلوش من أي موقع تاني.</p>
+<p><b>خلي بالك من الإعلانات:</b> الموقع الرسمي فيه إعلانات، وبعضها فيه أزرار تحميل وهمية. الزرار الصح هو اللي في جدول التحميل باسم الملف نفسه.</p>
+<p>الملف موقّع رقمياً باسم <b>Akeo Consulting</b>. تقدر تتأكد من التوقيع من خصائص الملف، أو بأمر PowerShell (تحت في قسم الأوامر).</p>
+<h2>الإصدار الحالي</h2>
+<p>آخر إصدار وقت نشر الشرح: <b>4.16</b> بتاريخ 2026.11.17، وحجم نسخة الويندوز 64 بت حوالي 1.9 ميجا. لو نسختك قديمة، نزّل آخر إصدار من نفس الموقع، مفيش تثبيت أصلاً فمفيش ترقية معقدة.</p>
+<p>البرنامج بيشتغل على ويندوز 8 أو أحدث، والفلاشة يفضل تكون 8 جيجا أو أكتر لو هتعمل فلاشة ويندوز 11.</p></div>
+<div class="card"><h2>قبل ما تبدأ: تحذير مهم</h2>
+<p>روفوس بيمسح الفلاشة بالكامل. انقل أي ملفات مهمة منها الأول، واتأكد إنك مختار الفلاشة الصح مش هارد خارجي.</p>
+<p>روفوس بيخفي الهاردات الخارجية افتراضياً للحماية. لو محتاج تعرضها، افتح «أظهر خصائص محرك الأقراص المتقدمة» وفعّل الخيار.</p></div>
+<div class="card"><h2>الواجهة والإعدادات</h2>
+<p>الواجهة مقسومة تلات أقسام: <b>خصائص محرك الأقراص</b>، و<b>خيارات التهيئة</b>، و<b>الحالة</b>.</p>
+<ol><li>اختار <b>الجهاز</b> من القايمة (الفلاشة).</li><li>من <b>نوع الإقلاع</b> دوس زر <b>اختيار</b> وحدد ملف الـ ISO.</li><li>من السهم اللي جنب زر اختيار تقدر تخلّي روفوس ينزّل الويندوز من سيرفرات مايكروسوفت، بس الخاصية دي بتظهر لو خيار التحديثات مفعّل.</li><li><b>مخطط التقسيم</b> و<b>النظام الهدف</b>: GPT مع UEFI للأجهزة الحديثة، وMBR مع BIOS للأجهزة القديمة. لو مش متأكد، اظبطه على إعدادات الجهاز اللي هتثبّت عليه.</li><li><b>نظام الملفات</b> و<b>حجم المجموعة</b> و<b>تسمية وحدة التخزين</b>: FAT32 هو الافتراضي وأكتر واحد متوافق. ولو الملف أكبر من 4 جيجا، روفوس بيستخدم NTFS مع حل خاص عشان الفلاشة تقلع على UEFI، وممكن يطلب منك تعطّل Secure Boot في الحالة دي.</li></ol>
+<h2>خيارات التهيئة اللي بعد زر «بدء»</h2>
+<p>بعد ما تدوس <b>بدء</b> بيظهر مربع خيارات، وفيه أهم ميزة في روفوس: تخطي شرط TPM 2.0 وSecure Boot والرام. وفيه كمان تخطي شرط حساب مايكروسوفت وعمل حساب محلي، وإيقاف تشفير BitLocker التلقائي، وخيار تحسينات بيشيل تطبيقات واقتراحات مايكروسوفت الزيادة، وآخر إصدار ضاف رجوع قائمة الكليك يمين الكلاسيكية في ويندوز 11.</p>
+<p>ومن «أظهر خيارات التهيئة المتقدمة» تلاقي فحص القطاعات التالفة (bad blocks)، وده بطيء وشغّال يدوي، ووضع DD للينكس.</p>
+<p><b>تحذير مايكروسوفت:</b> لو كسرت شروط ويندوز 11، مايكروسوفت بتقول إن الجهاز ده مش مدعوم، ومش مضمون إنه يستقبل تحديثات، وبيظهر علامة مائية على سطح المكتب. القرار في الآخر قرارك.</p></div>
+<div class="card"><h2>الخطوات بالترتيب</h2>
+<ol><li>نزّل روفوس من الموقع الرسمي وتأكد من توقيع الملف.</li><li>وصّل الفلاشة، وشغّل روفوس كمسؤول.</li><li>اختار الفلاشة من «الجهاز»، وملف ISO من «اختيار».</li><li>اظبط «مخطط التقسيم» و«النظام الهدف» على حسب جهازك.</li><li>دوس «بدء»، ومن مربع الخيارات فعّل اللي تحتاجه (زي تخطي TPM وSecure Boot لو الجهاز قديم).</li><li>وافق على التحذير، واستنى الكتابة تخلص (من دقايق لعشر دقايق تقريباً حسب الفلاشة وسرعة الجهاز).</li><li>اعمل ريستارت، وادخل على BIOS أو قائمة الإقلاع، واختار الفلاشة، وهتلاقي ويندوز بيبدأ التثبيت.</li></ol></div>
+<div class="card"><h2>روفوس ولا أداة مايكروسوفت الرسمية؟</h2>
+<p>أداة مايكروسوفت (Media Creation Tool) أسهل وأأمن لأنها رسمية، بس بتنزّل أحدث ويندوز 11 بس، ومفيهاش خيارات التخطي، ومابتشتغلش مع لينكس.</p>
+<p>فلو بتعمل فلاشة ويندوز عادية على جهاز مدعوم، أداة مايكروسوفت كفاية. ولو عايز تتحكم في الإعدادات، أو عندك ISO جاهز، أو الجهاز قديم، روفوس هو الاختيار.</p></div>
+<div class="card"><h2>الأوامر</h2>
+<pre><code># التأكد من توقيع ملف روفوس (لازم يظهر Akeo Consulting)
+Get-AuthenticodeSignature .\rufus-4.16.exe
+
+# تثبيت روفوس من سطر الأوامر (اختياري)
+winget install --id Rufus.Rufus -e
+
+# معرفة أرقام وأحجام الأقراص قبل اختيار الفلاشة
+diskpart
+list disk</code></pre></div>
+<div class="card"><p class="small">المصادر: الموقع الرسمي rufus.ie، صفحة الإصدارات على GitHub (pbatard/rufus)، الأسئلة الشائعة على rufus.wiki، وصفحات مايكروسوفت الرسمية عن ويندوز 11 والأجهزة غير المدعومة.</p></div>
+<div class="card"><h2>الروابط</h2><ul>
+<li>الفيديو الكامل على يوتيوب:<br><a style="word-break:break-all" href="https://youtu.be/SIsOIyeZSns" target="_blank" rel="noopener">https://youtu.be/SIsOIyeZSns</a></li>
+<li>الموقع الرسمي لروفوس:<br><a style="word-break:break-all" href="https://rufus.ie/en/" target="_blank" rel="noopener">https://rufus.ie/en/</a></li>
+<li>الإصدارات على GitHub:<br><a style="word-break:break-all" href="https://github.com/pbatard/rufus/releases" target="_blank" rel="noopener">https://github.com/pbatard/rufus/releases</a></li>
+<li>الأسئلة الشائعة:<br><a style="word-break:break-all" href="https://github.com/pbatard/rufus/wiki/FAQ" target="_blank" rel="noopener">https://github.com/pbatard/rufus/wiki/FAQ</a></li>
+<li>تحميل ويندوز 11 من مايكروسوفت:<br><a style="word-break:break-all" href="https://www.microsoft.com/en-us/software-download/windows11" target="_blank" rel="noopener">https://www.microsoft.com/en-us/software-download/windows11</a></li>
+<li>تنبيه مايكروسوفت عن الأجهزة غير المدعومة:<br><a style="word-break:break-all" href="https://support.microsoft.com/en-us/windows/installing-windows-11-on-devices-that-don-t-meet-minimum-system-requirements-0b2dc4a2-5933-4ad4-9c09-ef0a331518f1" target="_blank" rel="noopener">support.microsoft.com — الأجهزة غير المدعومة</a></li>
+<li>قناة يوتيوب:<br><a style="word-break:break-all" href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA</a></li></ul></div>
+</main><footer>© ركن الكمبيوتر · <a href="https://www.youtube.com/channel/UC3_amhonsFHaeBVZHSjoHzA" target="_blank" rel="noopener">اشترك في القناة على يوتيوب</a></footer><script data-goatcounter='https://rokn-alcomputer.goatcounter.com/count' async src='//gc.zgo.at/count.js'></script></body></html>
